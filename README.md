@@ -1,11 +1,13 @@
 ## SublimeStudio: Bringing the RStudio Experience to a Real Editor
 
-A SublimeText plug-in that tries to bring the nice parts of the user experience
+A SublimeText plug-in that tries to bring parts of the user experience
 in RStudio to SublimeText. It's designed to fulfill my personal needs, but you
 may find it useful as a template for your own customizations. I borrowed the
 sending-from-Sublime-to-R from RBox by Randyk (which is available through
 package control).
 
+
+https://github.com/randy3k/R-Box
 
 ### Features
 
@@ -26,7 +28,7 @@ package control).
 
 - Move sublimestudio to your package folder. Here's how to find the package folder.
 
-- Adjust the path to your R installation(s).
+- Adjust the path to your R installation(s) in `SublimeStudio.sublime-settings`.
 
 
 ### The Sublime Studio Menu
@@ -34,18 +36,7 @@ package control).
 The 'SublimeStudio' menu includes all functions offered by the plugin, the 
 frequently functions sharing the same shortkeys as in RStudio:
 
-  - LoadAll (using devtools, as in RStudio) ()
-  - Quit Browser (send 'Q' and Enter to R)
-
-  - Set R directory (to the active file in SublimeText)
-  - Set R Buffer (arbitrary text that runs after LoadAll)
-  - Build and Reload
-  - Build Source Package
-  - Source Current File
-
-  - Run Shiny (using the directory specifed by 'Set R directory')
-  - Send Lines/Blocks to R (or Splus) [Ct
-  - R Help
+![](img/sublime-studio-menu.png)
 
 
 ### Debugging
@@ -76,7 +67,6 @@ Python code in sublimetext.py (it's easy and worth it!)
 
 ### Credits and Licence
 
-Randyk, as mentioned. Autohotkey, which is included and used on Windows to transfer data from SublimeText to R. Do I also need a licence? GPL-3.
-
+Randyk, as mentioned. Autohotkey, which is included and used on Windows to transfer data from SublimeText to R. 
 
 
