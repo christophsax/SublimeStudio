@@ -1,0 +1,4 @@
+[
+  {"caption":"-", "id":"sublime-studio-separator"},
+  { "caption": "Set R-Directory", "id": "r-set-dir", "command": "r_set_dir", "args": {}},
+]

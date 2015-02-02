@@ -1,0 +1,69 @@
+[
+	{
+		"id": "SublimeStudio",
+		"caption": "SublimeStudio",
+		"children":
+		[
+			{
+				"caption": "Load All (and run Buffer)",
+				"command": "r_load_all", "args": {}
+			},
+			{
+				"caption": "Quit browser()",
+				"command": "r_quit", "args": {}
+			},
+			{
+				"caption": "-"
+			},
+			{
+				"caption": "Set R-Directory",
+				"command": "r_set_dir", "args": {}
+			},
+			{
+				"caption": "Set R-Buffer to Selection",
+				"command": "r_set_buffer", "args": {}
+			},
+			{
+				"caption": "-"
+			},
+			{
+				"caption": "Document",
+				"command": "r_document", "args": {}
+			},
+			{
+				"caption": "Build and Reload",
+				"command": "r_build_and_reload", "args": {}
+			},
+			{
+				"caption": "Build Source Package",
+				"command": "r_build_source_package", "args": {}
+			},
+			{
+				"caption": "-"
+			},
+			{
+				"caption": "Run Shiny",
+				"command": "r_shiny", "args": {}
+			},
+			{
+				"caption": "Reload Chrome Browser",
+				"command": "r_reload_chrome", "args": {}
+			},
+			{
+				"caption": "-"
+			},
+			{
+				"caption": "Run Line, Block or Selection",
+				"command": "r_run", "args": {}
+			},
+			{
+				"caption": "R Help for Selection",
+				"command": "r_help", "args": {}
+			},
+			{
+				"caption": "Switch R Version",
+				"command": "r_switch", "args": {}
+			}
+		]
+	}
+]

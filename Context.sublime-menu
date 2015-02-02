@@ -1,0 +1,8 @@
+[
+	{"caption":"-", "id":"sublime-studio-separator"},
+	{
+		"id": "SublimeStudio",
+				"caption": "Set R-Buffer to Selection",
+				"command": "r_set_buffer", "args": {}
+	}
+]

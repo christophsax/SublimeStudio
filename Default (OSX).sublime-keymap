@@ -1,0 +1,23 @@
+[
+  {
+    "keys": ["shift+command+c"], "command": "toggle_comment", "args": {}
+  },
+  { 
+    "keys": ["shift+command+l"], "command": "r_load_all", "args": {}
+  },
+  { 
+    "keys": ["shift+command+a"], "command": "r_reload_chrome", "args": {}
+  },
+  { 
+    "keys": ["f1"], "command": "r_help", "args": {}
+  },
+  { 
+    "keys": ["shift+command+v"], "command": "r_switch", "args": {}
+  },
+  { 
+    "keys": ["shift+command+q"], "command": "r_quit", "args": {}
+  },
+  { 
+    "keys": ["command+enter"], "command": "r_run", "args": {}
+  }
+]
