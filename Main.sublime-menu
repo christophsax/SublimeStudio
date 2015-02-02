@@ -39,6 +39,10 @@
 				"command": "r_build_source_package", "args": {}
 			},
 			{
+				"caption": "Source Current File",
+				"command": "r_source_file", "args": {}
+			},
+			{
 				"caption": "-"
 			},
 			{

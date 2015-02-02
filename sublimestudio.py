@@ -202,5 +202,10 @@ class RShiny(sublime_plugin.WindowCommand):
         r_cmd(s)
 
 
-
+# source current file
+class RSourceFile(sublime_plugin.TextCommand):
+    def run(self, edit):
+        path = self.view.file_name()
+        s = ('source(\"' + path + '\")')
+        r_cmd(s)
 
