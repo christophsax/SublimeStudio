@@ -1,4 +1,4 @@
-# SublimeStudio: RStudio Experience in a Real Editor
+# RStudio Experience in a Real Editor
 
 A Sublime Text plug-in that tries to bring parts of the user experience of
 RStudio to Sublime Text. It is primarily designed to fulfill my personal  needs,
