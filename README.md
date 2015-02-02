@@ -58,7 +58,7 @@ For crazy R debugging, I find the following strategy the most useful:
    `Ctrl/Cmd-Shift-L` to retry.
 
 
-## Switching R Versions (`Ctrl/Cmd-Shift-V`)
+## Switching R Versions
 
 This is useful if you are using different Versions of R. Occasonally, I
 also use S-plus with SublimeStudio, which helps me forget that I use  S-plus. I
