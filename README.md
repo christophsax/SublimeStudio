@@ -1,72 +1,73 @@
-## SublimeStudio: Bringing the RStudio Experience to a Real Editor
+# SublimeStudio: RStudio Experience in a Real Editor
 
-A SublimeText plug-in that tries to bring parts of the user experience
-in RStudio to SublimeText. It's designed to fulfill my personal needs, but you
-may find it useful as a template for your own customizations. I borrowed the
-sending-from-Sublime-to-R from RBox by Randyk (which is available through
-package control).
+A SublimeText plug-in that tries to bring parts of the user experience of
+RStudio to SublimeText. It is primarily designed to fulfill my personal  needs,
+but you may find it useful as a template for your own customizations.
+SublimeStudio has  borrowed heavily from
+[R-Box](https://github.com/randy3k/R-Box) by randy3k (which is available
+through package control).
 
 
-https://github.com/randy3k/R-Box
-
-### Features
+## Features
 
 - a prominent top level menu in SublimeStudio. You will love it (if R is your 
   main language), or hate it (otherwise).
+
+- RStudio niceties: shiny, roxygen, load all, build and reload
 
 - Support for different versions of R (or S-plus, or remote R sessions)
 
 - An efficient debugging strategy
 
-- Support for Windows and Mac 
-  (i.e., no Linux, but you may a look at how this has been done in RBox.)
+- Windows and Mac support 
 
 
-### Installation
+## Installation
 
-- Download the zip folder.
+- Download [zip folder](https://github.com/christophsax/SublimeStudio/archive/master.zip). Unzip.
 
-- Move sublimestudio to your package folder. Here's how to find the package folder.
+- Move the `SublimeStudio to your package folder (`Preferences > Browse Packages`).
 
-- Adjust the path to your R installation(s) in `SublimeStudio.sublime-settings`.
+- On Windows, adjust the path to your R installation(s) in 
+  `SublimeStudio.sublime-settings`.
 
 
-### The Sublime Studio Menu
+## The Sublime Studio Menu
 
-The 'SublimeStudio' menu includes all functions offered by the plugin, the 
-frequently functions sharing the same shortkeys as in RStudio:
+The SublimeStudio menu includes all functions offered by the plugin, with many
+functions sharing the same shortkeys as in RStudio:
 
 ![](img/sublime-studio-menu.png)
 
 
-### Debugging
+## Debugging
 
-For wild R debugging, I find the following strategy the most useful:
+For crazy R debugging, I find the following strategy the most useful:
 
-1) Mark the command you want to investigate and save it in the R-Buffer (by 
-   right click.) 
+1) Mark the command you want to investigate and save it in the SublimStudio 
+   R-Buffer (by right click). It stays there until you re-assign the buffer.
 
-2) Set browser() in your function. 
+2) Set a `browser()` somewhere in your function. 
 
-3) Press Ctrl/Cmd-Shift-L: This saves the file, re-loads the package (using
+3) Press `Ctrl/Cmd-Shift-L`: This saves the file, re-loads the package (using
    devtools) und runs the buffer line, so that R will halt were you set the 
    browser. (Make sure you have the option `browserNLdisabled` set to `TRUE`; 
    otherwise new lines will quit the browser.)
 
-4) After your changes, Press Ctrl/Command-Shift-Q to quit the browser and 
-   Ctrl/Cmd-Shift-L to retry (or land at another browser position).
+4) After your changes, Press `Ctrl/Cmd-Shift-Q` to quit the browser and 
+   `Ctrl/Cmd-Shift-L` to retry.
 
 
-### Switching R Versions
+## Switching R Versions
 
-This is very useful if you are using different Versions of R. Occasonally,
-I also use S-plus with SublimeStudio, which helps me to forget that I use 
-S-plus. I also added a terminal option (on) to work directly on a Linux server. If you want to set up your own Versions, you need to adjust the
-Python code in sublimetext.py (it's easy and worth it!)
+This is very useful if you are using different Versions of R. Occasonally, I
+also use S-plus with SublimeStudio, which helps me forget that I use  S-plus. I
+also added a terminal option (on Mac) to work directly on a Linux server.
 
+## Credits
 
-### Credits and Licence
-
-Randyk, as mentioned. Autohotkey, which is included and used on Windows to transfer data from SublimeText to R. 
+Randy3k, as mentioned. [Autohotkey](http://www.autohotkey.com), which is
+included in the `bin` folder and used on Windows to transfer data from 
+SublimeText to R.
 
 
