@@ -26,7 +26,7 @@ through package control).
 
 - Download [zip folder](https://github.com/christophsax/SublimeStudio/archive/master.zip). Unzip.
 
-- Move the `SublimeStudio to your package folder (`Preferences > Browse Packages`).
+- Move the `SublimeStudio` folder to your package directory (`Preferences > Browse Packages`).
 
 - On Windows, adjust the path to your R installation(s) in 
   `SublimeStudio.sublime-settings`.
@@ -34,8 +34,8 @@ through package control).
 
 ## The Sublime Studio Menu
 
-The SublimeStudio menu includes all functions offered by the plugin, with many
-functions sharing the same shortkeys as in RStudio:
+All functions can be called from the SublimeStudio menu, while the more frequent
+ones have a shotkey:
 
 ![](img/sublime-studio-menu.png)
 
@@ -51,16 +51,16 @@ For crazy R debugging, I find the following strategy the most useful:
 
 3) Press `Ctrl/Cmd-Shift-L`: This saves the file, re-loads the package (using
    devtools) und runs the buffer line, so that R will halt were you set the 
-   browser. (Make sure you have the option `browserNLdisabled` set to `TRUE`; 
+   browser. (Make sure the option `browserNLdisabled` is set to `TRUE`; 
    otherwise new lines will quit the browser.)
 
-4) After your changes, Press `Ctrl/Cmd-Shift-Q` to quit the browser and 
+4) After your changes, press `Ctrl/Cmd-Shift-Q` to quit the browser and 
    `Ctrl/Cmd-Shift-L` to retry.
 
 
-## Switching R Versions
+## Switching R Versions (`Ctrl/Cmd-Shift-V`)
 
-This is very useful if you are using different Versions of R. Occasonally, I
+This is useful if you are using different Versions of R. Occasonally, I
 also use S-plus with SublimeStudio, which helps me forget that I use  S-plus. I
 also added a terminal option (on Mac) to work directly on a Linux server.
 
