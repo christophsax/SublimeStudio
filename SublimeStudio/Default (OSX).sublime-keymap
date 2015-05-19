@@ -6,7 +6,7 @@
     "keys": ["shift+command+l"], "command": "r_load_all", "args": {}
   },
   { 
-    "keys": ["shift+command+a"], "command": "r_reload_chrome", "args": {}
+    "keys": ["shift+command+u"], "command": "r_reload_chrome", "args": {}
   },
   { 
     "keys": ["f1"], "command": "r_help", "args": {}
@@ -19,5 +19,22 @@
   },
   { 
     "keys": ["command+enter"], "command": "r_run", "args": {}
+  },
+  { 
+    "keys": ["shift+command+h"], "command": "r_set_dir", "args": {}
+  },
+  { 
+    "keys": ["shift+command+o"], "command": "r_set_buffer", "args": {}
+  },
+  { "keys": ["shift+command+d"], "command": "r_document", "context":
+    [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
+  }
+  ,
+  { "keys": ["shift+command+b"], "command": "r_build_and_reload", "context":
+    [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
+  },
+  { "keys": ["shift+command+a"], "command": "r_shiny", "context":
+    [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
   }
 ]
+

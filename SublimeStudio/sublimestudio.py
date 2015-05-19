@@ -34,6 +34,7 @@ def r_cmd(r_string):
     if (sublime.platform() == "osx"):
         App = sublime.load_settings('SublimeStudio.sublime-settings').get("App")
         if (App == 'R'):
+            r_string = r_string.replace('\\\\', '\\\\\\\\')
             r_string = r_string.replace('\"', '\\"')
             args = ['osascript', '-e']
             args.extend(['tell app "R" to cmd "' + r_string + '"'])
@@ -147,9 +148,6 @@ class RLoadAllCommand(sublime_plugin.WindowCommand):
         s = 'devtools::load_all(\"' + gRDir + '\"); ' + gRBuffer
         r_cmd(s)
       
-
-# the following commands are infrequently used and would be nicer in a menu
-# the menu should contain all commands an also show the shortkey
 
 # devtools::document
 class RDocumentCommand(sublime_plugin.WindowCommand):
