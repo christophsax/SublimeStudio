@@ -155,6 +155,12 @@ class RDocumentCommand(sublime_plugin.WindowCommand):
         s = ('devtools::document(\"' + gRDir + '\", roclets=c(\"rd\", \"collate\", \"namespace\"))')
         r_cmd(s)
 
+# devtools::test
+class RTestCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        s = ('devtools::test(\"' + gRDir + '\")')
+        r_cmd(s)
+
 
 # build and reload
 class RBuildAndReloadCommand(sublime_plugin.WindowCommand):
@@ -206,4 +212,25 @@ class RSourceFile(sublime_plugin.TextCommand):
         path = self.view.file_name()
         s = ('source(\"' + path + '\")')
         r_cmd(s)
+
+# run shiny app included in package
+class RMarkdown(sublime_plugin.WindowCommand):
+    def run(self):
+        s = ('library(knitr); library(rmarkdown); .file <- list.files("' + gRDir + '", pattern="\\\\.R?md$", full.names = TRUE)[1]; rmarkdown::render(.file); browseURL(gsub("Rmd", "pdf", .file))')
+        print(s)
+        r_cmd(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

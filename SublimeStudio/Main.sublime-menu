@@ -31,6 +31,10 @@
 				"command": "r_document", "args": {}
 			},
 			{
+				"caption": "Test",
+				"command": "r_test", "args": {}
+			},
+			{
 				"caption": "Build and Reload",
 				"command": "r_build_and_reload", "args": {}
 			},

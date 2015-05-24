@@ -28,13 +28,18 @@
   },
   { "keys": ["shift+command+d"], "command": "r_document", "context":
     [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
-  }
-  ,
+  },
+  { "keys": ["shift+command+t"], "command": "r_test", "context":
+    [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
+  },
   { "keys": ["shift+command+b"], "command": "r_build_and_reload", "context":
     [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
   },
   { "keys": ["shift+command+a"], "command": "r_shiny", "context":
     [{ "key": "selector", "operator": "equal", "operand": "source.r" }]
+  },
+  { 
+    "keys": ["shift+command+m"], "command": "r_markdown", "args": {}
   }
 ]
 
