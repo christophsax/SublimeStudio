@@ -58,6 +58,10 @@
 				"command": "r_reload_chrome", "args": {}
 			},
 			{
+				"caption": "R Markdown, Pandoc",
+				"command": "r_markdown", "args": {}
+			},
+			{
 				"caption": "-"
 			},
 			{

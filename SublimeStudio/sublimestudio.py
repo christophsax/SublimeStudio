@@ -34,14 +34,18 @@ def r_cmd(r_string):
     if (sublime.platform() == "osx"):
         App = sublime.load_settings('SublimeStudio.sublime-settings').get("App")
         if (App == 'R'):
-            r_string = r_string.replace('\\\\', '\\\\\\\\')
+            r_string = r_string.replace('\\', '\\\\')
+            # r_string = r_string.replace('\\\\', '\\\\\\\\')
             r_string = r_string.replace('\"', '\\"')
             args = ['osascript', '-e']
             args.extend(['tell app "R" to cmd "' + r_string + '"'])
             subprocess.Popen(args)
         if (App == 'Terminal'):
-            sublime.status_message("TODO: remove the final newline")
+            # sublime.status_message("TODO: remove the final newline")
+            # r_string = r_string.replace('\\\\', '\\\\\\\\')
+            r_string = r_string.replace('\\', '\\\\')
             r_string = r_string.replace('\"', '\\"')
+            sublime.status_message(r_string)
             args = ['osascript', '-e']
             args.extend(['tell app "Terminal" to do script  "' + r_string + '" in front window'])
             subprocess.Popen(args)
@@ -213,10 +217,14 @@ class RSourceFile(sublime_plugin.TextCommand):
         s = ('source(\"' + path + '\")')
         r_cmd(s)
 
-# run shiny app included in package
-class RMarkdown(sublime_plugin.WindowCommand):
-    def run(self):
-        s = ('library(knitr); library(rmarkdown); .file <- list.files("' + gRDir + '", pattern="\\\\.R?md$", full.names = TRUE)[1]; rmarkdown::render(.file); browseURL(gsub("Rmd", "pdf", .file))')
+# run rmarkdown
+class RMarkdown(sublime_plugin.TextCommand):
+    def run(self, edit):
+        path = self.view.file_name()
+        self.view.run_command("save")   
+
+        print(path)
+        s = ('library(knitr); library(rmarkdown); rmarkdown::render(\"' + path + '\"); browseURL(gsub("Rmd", "pdf", \"' + path + '\"))')
         print(s)
         r_cmd(s)
 
