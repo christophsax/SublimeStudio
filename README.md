@@ -51,7 +51,7 @@ you use, e.g. LoadAll (`shift`+`ctrl/cmd`+`L`), this directory will be loaded.
 For convenience, if you are inside the R subfolder of an R package, the parent
 folder is chosen.
 
-If you want to run a Shiny app, make set the directory of your shiny app (the
+If you want to run a Shiny app, make the directory of your shiny app (the
 one with `ui.R` and `server.R`) your 'R-directory'. Press `shift`+`ctrl/cmd`+`A`
 to run the app.
 
