@@ -13,7 +13,7 @@ through package control).
 - a prominent top level menu in SublimeStudio. You will love it (if R is your 
   main language), or hate it (otherwise).
 
-- RStudio niceties: shiny, roxygen, load all, build and reload
+- RStudio niceties: shiny, rmarkdown, roxygen, load all, build and reload
 
 - Support for different versions of R (or S-plus, or remote R sessions)
 
