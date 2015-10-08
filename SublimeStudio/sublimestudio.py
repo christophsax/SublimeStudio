@@ -214,6 +214,8 @@ class RShiny(sublime_plugin.WindowCommand):
 class RSourceFile(sublime_plugin.TextCommand):
     def run(self, edit):
         path = self.view.file_name()
+        if sublime.platform() == "windows":
+            path = path.replace("\\", "\\\\")
         s = ('source(\"' + path + '\")')
         r_cmd(s)
 
@@ -221,6 +223,8 @@ class RSourceFile(sublime_plugin.TextCommand):
 class RMarkdown(sublime_plugin.TextCommand):
     def run(self, edit):
         path = self.view.file_name()
+        if sublime.platform() == "windows":
+            path = path.replace("\\", "\\\\")
         self.view.run_command("save")   
 
         print(path)
