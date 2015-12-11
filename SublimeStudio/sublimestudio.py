@@ -185,10 +185,12 @@ class RSetDir(sublime_plugin.TextCommand):
     def run(self, edit):
         global gRDir
         path = self.view.file_name()
-        # use the package root directory if inside an R package
-        path = os.path.dirname(path).replace("/R", "")
-        path = path.replace("\\R", "") # windows
-        path = path.replace("man", "")
+        path = os.path.dirname(path)
+
+        # using regexes here avoids removal of 'R' in dir names
+        path = re.sub(r'\\R$', '', path)
+        path = re.sub(r'/R$', '', path)
+        path = re.sub(r'man$', '', path)
         gRDir = path.replace("\\", "\\\\")
         sublime.status_message("R-directory set to \'" + gRDir + "\'")
 
