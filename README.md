@@ -1,3 +1,6 @@
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+
+
 # RStudio Experience in a Real Editor
 
 A Sublime Text plug-in that tries to bring parts of the user experience of
